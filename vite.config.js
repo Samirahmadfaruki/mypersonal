@@ -1,16 +1,8 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        primary: '#0a77d3',
-      },
-    },
-  },
-  plugins: [],
-}
+// vite.config.js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+export default defineConfig({
+  base: 'Samirahmadfaruki/mypersonal/', // ✅ use your GitHub repo name here
+  plugins: [react()],
+})
