@@ -1,8 +1,18 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        navigate("/");
+      }, 1000); // 1 second
+  
+      return () => clearTimeout(timer); // cleanup
+    }, [navigate]);
     return (
         <div className="h-screen flex flex-col items-center justify-center bg-gray-900 text-white">
             <h1 className="text-6xl font-bold text-red-500">404</h1>

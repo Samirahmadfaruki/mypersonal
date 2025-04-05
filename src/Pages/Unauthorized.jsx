@@ -1,16 +1,8 @@
 
 import React from "react";
-import { useNavigate } from "react-router-dom";
-const Unauthorized = () => {
-    const navigate = useNavigate();
 
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        navigate("/");
-      }, 1000); // 1 second
-  
-      return () => clearTimeout(timer); // cleanup
-    }, [navigate]);
+const Unauthorized = () => {
+
     return (
         <div className="flex flex-col items-center justify-center h-screen text-center bg-gray-100">
             <h1 className="mb-4 text-4xl font-bold text-red-600">403 - Unauthorized</h1>
